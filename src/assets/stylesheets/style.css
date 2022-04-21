@@ -1,0 +1,59 @@
+/*** Project Meta ***/
+
+/* general - line 13 */
+
+/* header - line 39 */
+
+/* main content - line 19 */
+
+/* footer - line 144 */
+
+/** GENERAL **/
+
+/* @font-face {
+  font-family: 'MyFont';
+  src: url('./my-font.woff2') format('woff2'),
+    url('./my-font.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+} */
+
+/* :root {
+  --border-bottom: 1px solid rgb(230, 230, 230);
+  --grey: rgb(246, 246, 246);
+  --flex: flex;
+  --border-radius: 10px;
+} */
+
+/* Mobile View */
+
+.html {
+  font-size: 87.5%;
+  scroll-behavior: smooth;
+  background-color: darkolivegreen;
+}
+
+.body {
+  position: relative;
+}
+
+.offscreen {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/** header **/
+
+/* Main Content */
+
+h1 {
+  color: red;
+}
+
+/* Footer */
