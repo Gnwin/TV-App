@@ -48,12 +48,24 @@
   width: 1px;
 }
 
+.appwidth {
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+
+}
+
 /** header **/
 
 /* Main Content */
 
-h1 {
-  color: red;
+.shows {
+  display: flex;
+  flex-direction: column;
+}
+
+.show {
+  /* width: ; */
 }
 
 /* Footer */
