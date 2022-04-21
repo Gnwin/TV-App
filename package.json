@@ -4,7 +4,7 @@
   "description": "An App that displays different TV shows",
   "private": "true",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Gnwin/TV-App#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
