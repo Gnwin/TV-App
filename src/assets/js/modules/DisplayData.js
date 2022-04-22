@@ -1,42 +1,60 @@
 import Show from './Show';
+// import Comment from './Comment';
 import shows from './Shows';
+// import Comments from './Comments';
 import showtemplate from './ShowTemplate';
+// import commenttemplate from './CommentTemplate';
+import grabInput from './GrabUserinput';
+// import insertComment from './insertCommentContent';
 
 const showsDiv = document.querySelector('.shows');
+let showTemplate = '';
+
 
 class Display {
   render = (data) => {
-
-    let showTemplate = '';
     data.forEach(element => {
-      const show = new Show(element.image.medium, element.name, element.id );
+      const show = new Show(element.id, element.name, element.image.medium, 0);
       shows.addShows(show);
-      showTemplate += showtemplate(element.image.medium, element.name, element.id);
+      showTemplate += showtemplate(element.id, element.name, element.image.medium, 0);
     });
     showsDiv.innerHTML = showTemplate;
 
-    // const scorelist = document.querySelector('.scores');
-    // const message = document.querySelector('.message');
-    // if (data.length === 0) {
-    //   scorelist.innerHTML = error;
-    //   message.style.display = 'none';
-    //   return;
-    // }
-    // message.style.display = 'block';
-    // let markup = '';
-    // data.forEach((element) => {
-    //   const gameitem = game(element.user, element.score);
-    //   markup += gameitem;
-    // });
-    // scorelist.innerHTML = markup;
+    const commentsbtns = document.querySelectorAll(".comments");
 
-    // let showTemplate = '';
-    // json.forEach(element => {
-    //   showTemplate += show(element.image.medium, element.name, element.id);
+    commentsbtns.forEach((element) => {
+      element.onclick = grabInput.openComment
+    })
+
+    
+    // inputFocus.forEach((element) => {
+    //   // proper closure;
+    //   const listItemElement = element.value;
+    //   const makeHandler = (listItemElement) => (event) => {
+    //     grabinput.changeValue(event, listItemElement);
+    //   };
+    //   element.addEventListener('change', makeHandler(listItemElement));
     // });
-    // shows.innerHTML = showTemplate;
+
+    const span = document.getElementsByClassName("close")[0];
+    span.onclick = grabInput.closeComment;
+
+    // const commentcontent = document.querySelector(".commentcontent");
+
+    // span.onclick = function() {
+    //   modal.style.display = "none";
+    // }
+
+    // window.onclick = function(event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
+
   }
 }
+
+
 
 const display = new Display();
 export default display;

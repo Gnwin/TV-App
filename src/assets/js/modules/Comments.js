@@ -4,5 +4,9 @@ class Comments {
     this.comments = [];
   }
 
-  addComment = () => {}
+  addComment = (comment) => {
+    this.comments.push(comment);
+  }
 }
+
+export default Comments;

@@ -1,10 +1,10 @@
 
 class Show {
-  constructor (id, title, imgUrl){
+  constructor (id, title, imgUrl, likes){
     this.id = id;
     this.title = title;
     this.imgUrl = imgUrl;
-    this.likes = 0;
+    this.likes = likes;
   }
 }
 
