@@ -9,9 +9,9 @@ class Display {
 
     let showTemplate = '';
     data.forEach(element => {
-      const show = new Show(element.id, element.name, element.image.medium);
+      const show = new Show(element.image.medium, element.name, element.id );
       shows.addShows(show);
-      showTemplate += showtemplate();
+      showTemplate += showtemplate(element.image.medium, element.name, element.id);
     });
     showsDiv.innerHTML = showTemplate;
 

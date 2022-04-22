@@ -27,8 +27,6 @@ const runApp = () => {
 
   } else {
     const tvStorage = JSON.parse(localStorage.getItem(key));
-    // tvStorage.shows = shows;
-    // localStorage.setItem(key, JSON.stringify(tvStorage));
     display.render(tvStorage.shows);
   }
 
