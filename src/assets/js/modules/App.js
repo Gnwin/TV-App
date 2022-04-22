@@ -1,5 +1,4 @@
 import * as InvAPI from "./InvolvementAPI";
-// import createNewApp from "./InvolvementAPI";
 import { getAllShows } from "./TVapi";
 
 import display from "./DisplayData";
@@ -26,16 +25,11 @@ const runApp = () => {
         console.error(e.message);
       })
 
-    // getAllShows()
-    // .then((shows) => {
-    //   const tvStorage = JSON.parse(localStorage.getItem(key));
-    //   tvStorage.shows = shows;
-    //   localStorage.setItem(key, JSON.stringify(tvStorage));
-    //   display.render(tvStorage.shows);
-    // })
-
   } else {
-
+    const tvStorage = JSON.parse(localStorage.getItem(key));
+    // tvStorage.shows = shows;
+    // localStorage.setItem(key, JSON.stringify(tvStorage));
+    display.render(tvStorage.shows);
   }
 
 }
