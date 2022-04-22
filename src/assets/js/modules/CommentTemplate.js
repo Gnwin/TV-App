@@ -1,8 +1,8 @@
-let commenttemplate = (comment) => `<div class="commenttemplate" id=${comment.id}>
+let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commentInfo.id}>
   <div class='cthumbnail'>
-    <img class='cimg' src='${comment.link}'/>
+    <img class='cimg' src='${commentInfo.link}'/>
   </div>
-  <div class='title'>${comment.name}</div>
+  <div class='title'>${commentInfo.name}</div>
   <div class='details'>
     <div class='fuel'>Fuel</div>
     <div class='length'>length</div>
@@ -12,7 +12,8 @@ let commenttemplate = (comment) => `<div class="commenttemplate" id=${comment.id
 
   <div class='commentsection'>
     <h1 class='viewcomments'>Comments(0)<h1>
-    <div class='comment'>${comment.date} commenter :${comment.insight}</div>
+    <div class='commentlist'>
+    </div>
   </div>
 
   <div class='addacomment'>

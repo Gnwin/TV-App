@@ -1,20 +1,15 @@
 import Show from './Show';
-// import Comment from './Comment';
 import shows from './Shows';
-// import Comments from './Comments';
 import showtemplate from './ShowTemplate';
-// import commenttemplate from './CommentTemplate';
 import grabInput from './GrabUserinput';
-// import insertComment from './insertCommentContent';
 
 const showsDiv = document.querySelector('.shows');
 let showTemplate = '';
 
-
 class Display {
   render = (data) => {
     data.forEach(element => {
-      const show = new Show(element.id, element.name, element.image.medium, 0);
+      const show = new Show(element.id, element.name, element.image.medium, element.likes);
       shows.addShows(show);
       showTemplate += showtemplate(show);
     });

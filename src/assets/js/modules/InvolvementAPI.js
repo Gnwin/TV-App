@@ -16,20 +16,35 @@ export const createNewApp = () => {
     .then(response => response.text())
 }
 
-// export const getAllShows = () =>
-//   fetch(`${api}/books`, { headers })
-//     .then(res => res.json())
-//     .then(data => data.books)
+export const createlike = (app_id, item1) => {
+  fetch(`${api}/${app_id}/likes`, {
+    method: 'POST',
+    body: JSON.stringify({ "item_id": item1 })
+  })
+    .then(res => res.json())
+}
 
-// export const update = (book, shelf) =>
-//   fetch(`${api}/books/${book.id}`, {
-//     method: 'PUT',
-//     headers: {
-//       ...headers,
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({ shelf })
-//   }).then(res => res.json())
+export const getlikes = (app_id) => {
+  return fetch(`${api}/${app_id}/likes`)
+    .then(res => res.json())
+}
+
+export const createcomment = (app_id, item1, name, comment) => {
+  fetch(`${api}/${app_id}/comments`, {
+    method: 'POST',
+    body: JSON.stringify({
+      "item_id": item1,
+      "username": name,
+      "comment": comment
+    })
+  })
+    .then(res => res.json())
+}
+
+export const getcomments = (app_id, item1) => {
+  return fetch(`${api}/${app_id}/comments?item_id=${item1}`)
+    .then(res => res.json())
+}
 
 // export const search = (query, maxResults) =>
 //   fetch(`${api}/search`, {
@@ -41,3 +56,8 @@ export const createNewApp = () => {
 //     body: JSON.stringify({ query, maxResults })
 //   }).then(res => res.json())
 //     .then(data => data.books)
+
+
+// /apps/:app_id/likes/
+
+// /apps/abc234/comments?item_id=item1

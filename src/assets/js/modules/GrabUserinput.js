@@ -1,44 +1,22 @@
-import insertComment from "./InsertCommentContent";
-// import showtemplate from "./ShowTemplate";
+import insertCommentModalInfo from "./InsertCommentContent";
 import commenttemplate from './CommentTemplate';
-import Comments from "./Comments";
-import Comment from "./Comment";
-
-
-
-// const commentsbtn = document.querySelector(".comments");
-
-// const commentcontent = document.querySelector(".commentcontent");
-
-// commentsbtn.onclick = function() {
-//   modal.style.display = "block";
-// }
-// const span = document.getElementsByClassName("close")[0];
-
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-let commentbox = new Comments();
+import CommentModal from "./CommentModal";
 
 class GrabUserInput {
 
   openComment = (e) => {
     e.preventDefault();
+    const showId = e.target.parentElement.id;
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
-
+    let commentModal;
     tvStorage.shows.forEach(element => {
-      const comment = new Comment(element.id, element.name, 'date', element.image.medium, 'insight');
-      commentbox.addComment(comment);
+      if (showId == element.id) {
+        commentModal = new CommentModal(element.id, element.name, element.image.medium);
+      }
     });
-    
-    insertComment(e.target.parentElement.id, commentbox.comments, commenttemplate);
+    const modal = document.getElementById("myModal");
+    insertCommentModalInfo(commentModal, commenttemplate);
+    modal.style.display = "block";
   }
 
   closeComment = (e) => {
