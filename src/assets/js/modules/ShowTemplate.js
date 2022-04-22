@@ -1,15 +1,15 @@
 // import commenttemplate from './CommentTemplate'
 
-let showtemplate = (id, name, link, num) => `<div class="show" id=${id}>
+let showtemplate = (show) => `<div class="show" id=${show.id}>
   <div class='thumbnail'>
-    <img class='img' src='${link}'/>
+    <img class='img' src='${show.imgUrl}'/>
   </div>
   <div class='info'>
-    <div class=''>${name}</div>
+    <div class=''>${show.name}</div>
     <div class=''>(lovelogo)</div>
   </div>
   <div class='likesinfo'>
-    <div class='likes'>${num}<span class='likesnum'> likes</span></div>
+    <div class='likes'>${show.num}<span class='likesnum'> likes</span></div>
   </div>
 
   <button class='comments'>Comments</button>
