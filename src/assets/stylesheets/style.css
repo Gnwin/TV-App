@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /*** Project Meta ***/
 
 /* general - line 13 */
@@ -27,6 +29,10 @@
 
 /* Mobile View */
 
+* {
+  font-family: Poppins, sans-serif;
+}
+
 .html {
   font-size: 87.5%;
   scroll-behavior: smooth;
@@ -35,6 +41,7 @@
 
 .body {
   position: relative;
+  margin: 0;
 }
 
 .offscreen {
@@ -50,10 +57,17 @@
 
 /** header **/
 
-/* Main Content */
-
-h1 {
-  color: red;
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px;
+  gap: 200px;
 }
 
-/* Footer */
+.logo {
+  width: 81px;
+  height: auto;
+}
+
+/* Main Content */
