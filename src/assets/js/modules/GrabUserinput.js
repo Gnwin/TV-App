@@ -1,9 +1,9 @@
-import insertCommentModalInfo from "./InsertCommentContent";
-import commenttemplate from './CommentTemplate';
-import CommentModal from "./CommentModal";
-import Comment from './Comment';
-import commentMarkup from './CommentMarkup';
-import formatDate from './Date';
+import insertCommentModalInfo from "./InsertCommentContent.js";
+import commenttemplate from './CommentTemplate.js';
+import CommentModal from './CommentModal.js';
+import Comment from './Comment.js';
+import commentMarkup from './CommentMarkup.js';
+import formatDate from './Date.js';
 
 class GrabUserInput {
   openComment = (e) => {
@@ -11,8 +11,8 @@ class GrabUserInput {
     const showId = e.target.parentElement.id;
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
     let commentModal;
-    tvStorage.shows.forEach(element => {
-      if (showId == element.id) {
+    tvStorage.shows.forEach((element) => {
+      if (Number(showId) === element.id) {
         commentModal = new CommentModal(element.id, element.name, element.image.medium, element.language, element.runtime);
       }
     });
@@ -26,7 +26,7 @@ class GrabUserInput {
       const commentList = document.querySelector('.commentlist');
       let counter = 0;
       tvStorage.comments.forEach(element => {
-        if (showId == element.id) {
+        if (Number(showId) == element.id) {
           existingComment += commentMarkup(element);
           counter += 1;
         }
@@ -48,14 +48,14 @@ class GrabUserInput {
   like = (e) => {
     e.preventDefault();
     const itemid = e.target.parentElement.parentElement.parentElement.id;
-    let likeElement = e.target.parentElement.parentElement.parentElement.children[2].children[0].children[0];
+    const likeElement = e.target.parentElement.parentElement.parentElement.children[2].children[0].children[0];
     let likenum = Number(likeElement.innerHTML);
     likenum += 1;
     likeElement.innerHTML = likenum;
 
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
-    tvStorage.likes.forEach(element => {
-      if (itemid == element.likeid) {
+    tvStorage.likes.forEach((element) => {
+      if (Number(itemid) === element.likeid) {
         element.likes = likenum;
       }
     });
@@ -64,21 +64,21 @@ class GrabUserInput {
 
   comment = (e) => {
     e.preventDefault();
-    const id  = e.target.parentElement.id;
+    const id = e.target.parentElement.id;
     const name = document.querySelector('.yourname');
     const insight = document.querySelector('.yourinsight');
-    let namevalue = name.value;
-    let insightvalue = insight.value;
+    const namevalue = name.value;
+    const insightvalue = insight.value;
     if (!namevalue || !insightvalue) {
-      return
+      return;
     }
     name.value = '';
     insight.value = '';
-    let date = formatDate(new Date());
+    const date = formatDate(new Date());
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
     const newlyCreatedComment = new Comment(id, date, namevalue, insightvalue);
 
-    let newlyCreatedCommentMarkup =  commentMarkup(newlyCreatedComment);
+    const newlyCreatedCommentMarkup = commentMarkup(newlyCreatedComment);
     const commentList = document.querySelector('.commentlist');
     let content = commentList.innerHTML;
     content += newlyCreatedCommentMarkup;
@@ -86,8 +86,8 @@ class GrabUserInput {
     tvStorage.comments.push(newlyCreatedComment);
     const commentNum = document.querySelector('.commentnum');
     let counter = 0;
-    tvStorage.comments.forEach(element => {
-      if (id == element.id) {
+    tvStorage.comments.forEach((element) => {
+      if (id === element.id) {
         counter += 1;
       }
     });
@@ -96,5 +96,5 @@ class GrabUserInput {
   }
 }
 
-const grabInput = new GrabUserInput()
+const grabInput = new GrabUserInput();
 export default grabInput;

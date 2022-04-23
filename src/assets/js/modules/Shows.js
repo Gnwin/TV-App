@@ -1,6 +1,5 @@
-
 class Shows {
-  constructor(){
+  constructor() {
     this.shows = [];
   }
 
@@ -11,4 +10,3 @@ class Shows {
 
 const shows = new Shows();
 export default shows;
-

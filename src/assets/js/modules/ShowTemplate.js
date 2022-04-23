@@ -1,4 +1,4 @@
-let showtemplate = (show) => `<div class="show" id=${show.id}>
+const showtemplate = (show) => `<div class="show" id=${show.id}>
   <div class='thumbnail'>
     <img class='img' src='${show.imgUrl}'/>
   </div>

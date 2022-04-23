@@ -22,5 +22,3 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
 </div>`;
 
 export default commenttemplate;
-language: "English"
-runtime: 60

@@ -11,8 +11,6 @@ const formatDate = (date) => {
     date.getFullYear(),
     padTo2Digits(date.getDate()),
   ].join('/');
-}
+};
 
 export default formatDate;
-
-

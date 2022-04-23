@@ -1,5 +1,5 @@
 class CommentModal {
-  constructor (id, name, link, language, runtime) {
+  constructor(id, name, link, language, runtime) {
     this.id = id;
     this.name = name;
     this.link = link;
