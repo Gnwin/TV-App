@@ -55,6 +55,7 @@ class GrabUserInput {
 
   comment = (e) => {
     e.preventDefault();
+    
   }
 }
 
