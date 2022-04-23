@@ -12,6 +12,7 @@ let showTemplate = '';
 class Display {
   render = (data) => {
     const likesArr = [];
+    const commentsArr = [];
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
     data.shows.forEach(element => {
       const show = new Show(element.id, element.name, element.image.medium);
@@ -32,6 +33,25 @@ class Display {
         likesArr.push(likess);
       })
     }
+
+  //   this.id = id;
+  //   this.name = name;
+  //   this.date = date;
+  //   this.insight = insight;
+  // }
+
+    // if (tvStorage.comments.length === 0) {
+    //   data.shows.forEach(element => {
+    //     const comment = new Comment(element.id, '', '', '');
+    //     commentsArr.push(comment);
+    //   })
+    // } else {
+    //   const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
+    //   // tvStorage.comments.forEach(element => {
+    //     // const comment = new (element.id, element.likes);
+    //     // commentsArr.push(likess);
+    //   // })
+    // }
 
     const likeElement = document.querySelectorAll('.likesnum');
     likesArr.forEach((element, index) => {
@@ -60,6 +80,11 @@ class Display {
     //   element.addEventListener('change', makeHandler(listItemElement));
     // });
 
+    const likeAShow = document.querySelectorAll('.lovelogo');
+    likeAShow.forEach(element => {
+      element.onclick = grabInput.like;
+    });
+
     const span = document.getElementsByClassName("close")[0];
     span.onclick = grabInput.closeComment;
 
@@ -69,11 +94,6 @@ class Display {
         modal.style.display = "none";
       }
     }
-
-    const likeAShow = document.querySelectorAll('.lovelogo');
-    likeAShow.forEach(element => {
-      element.onclick = grabInput.like;
-    });
   }
 }
 

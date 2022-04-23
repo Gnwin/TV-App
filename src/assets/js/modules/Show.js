@@ -1,4 +1,3 @@
-
 class Show {
   constructor (id, title, imgUrl){
     this.id = id;

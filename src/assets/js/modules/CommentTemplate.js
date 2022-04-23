@@ -11,7 +11,7 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
   </div>
 
   <div class='commentsection'>
-    <h1 class='viewcomments'>Comments(0)<h1>
+    <h1 class='viewcomments'>Comments(<span class='commentnum'></span>)<h1>
     <div class='commentlist'></div>
   </div>
 
