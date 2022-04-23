@@ -1,9 +1,6 @@
 // code reference:
 // https://bobbyhadz.com/blog/javascript-get-date-without-time#:~:text=Use%20the%20setHours()%20method,according%20to%20the%20provided%20values.
 
-
-// const date = new Date();
-
 const formatDate = (date) => {
   function padTo2Digits(num) {
     return num.toString().padStart(2, '0');

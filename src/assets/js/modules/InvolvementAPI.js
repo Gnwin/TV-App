@@ -1,6 +1,4 @@
-
 const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-
 
 export const createNewApp = () => {
   return fetch(`${involvementApi}/apps/`, {
@@ -21,29 +19,9 @@ export const createlike = (app_id, item1) => {
     .then(res => res.json())
 }
 
-// export const postLike = async (endpoint, id) => {
-//   let response;
-//   try {
-//     response = await fetch(endpoint, {
-//       method: 'POST',
-//       body: JSON.stringify({
-//         item_id: id,
-//       }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
-//   } catch (error) {
-//     return error.message;
-//   }
-//   return response.ok;
-// };
-
 export const getlikes = (app_id) => {
   return fetch(`${involvementApi}/apps/${app_id}/likes/`)
-    .then(res => {
-      // return res.json();
-    })
+    .then(res => {res.json()})
 }
 
 export const createcomment = (app_id, item1, name, comment) => {

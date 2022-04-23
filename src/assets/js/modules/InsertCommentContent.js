@@ -1,4 +1,3 @@
-
 const insertCommentModalInfo = (modal, commentmarkup) => {
   const commentcontent = document.querySelector(".commentcontent");
   let commentModalContent = '';

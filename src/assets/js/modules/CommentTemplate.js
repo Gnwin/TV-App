@@ -4,10 +4,8 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
   </div>
   <div class='title'>${commentInfo.name}</div>
   <div class='details'>
-    <div class='fuel'>Fuel</div>
-    <div class='length'>length</div>
-    <div class='weight'>weight</div>
-    <div class='power'>power</div>
+    <div class='language'>Language: ${commentInfo.language}</div>
+    <div class='runtime'>Runtime: ${commentInfo.runtime}s</div>
   </div>
 
   <div class='commentsection'>
@@ -24,5 +22,5 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
 </div>`;
 
 export default commenttemplate;
-
-// id, link, name, numOfComment, date, commenter, insight
+language: "English"
+runtime: 60

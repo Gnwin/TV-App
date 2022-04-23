@@ -224,9 +224,13 @@
   margin-left: 5%;
 }
 
+.logo {
+  width: 20px;
+}
 
-
-
+.showtitle {
+  font-size: 0.9rem;
+}
 
 @media screen and (min-width: 384px) {
   .shows {

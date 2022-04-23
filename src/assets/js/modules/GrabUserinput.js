@@ -1,4 +1,3 @@
-import * as InvAPI from './InvolvementAPI'
 import insertCommentModalInfo from "./InsertCommentContent";
 import commenttemplate from './CommentTemplate';
 import CommentModal from "./CommentModal";
@@ -14,17 +13,11 @@ class GrabUserInput {
     let commentModal;
     tvStorage.shows.forEach(element => {
       if (showId == element.id) {
-        commentModal = new CommentModal(element.id, element.name, element.image.medium);
+        commentModal = new CommentModal(element.id, element.name, element.image.medium, element.language, element.runtime);
       }
     });
     const modal = document.getElementById("myModal");
     insertCommentModalInfo(commentModal, commenttemplate);
-      //   this.id = id;
-      //   this.name = name;
-      //   this.date = date;
-      //   this.insight = insight;
-      // }
-
     const commentNum = document.querySelector('.commentnum');
     if (tvStorage.comments.length === 0) {
       commentNum.innerHTML = 0;
@@ -54,8 +47,8 @@ class GrabUserInput {
 
   like = (e) => {
     e.preventDefault();
-    const itemid = e.target.parentElement.parentElement.id;
-    let likeElement = e.target.parentElement.parentElement.children[2].children[0].children[0];
+    const itemid = e.target.parentElement.parentElement.parentElement.id;
+    let likeElement = e.target.parentElement.parentElement.parentElement.children[2].children[0].children[0];
     let likenum = Number(likeElement.innerHTML);
     likenum += 1;
     likeElement.innerHTML = likenum;
@@ -67,15 +60,6 @@ class GrabUserInput {
       }
     });
     localStorage.setItem('tvapp', JSON.stringify(tvStorage));
-
-    // let appid = JSON.parse(localStorage.getItem('tvapp'));
-    // appid = appid.appId;
-    // console.log(appid);
-    // InvAPI.createlike(appid, itemid)
-    //   .then((response) => {
-    //     console.log(response);
-    //     return response;
-    //   })
   }
 
   comment = (e) => {
@@ -108,7 +92,6 @@ class GrabUserInput {
       }
     });
     commentNum.innerHTML = counter;
-
     localStorage.setItem('tvapp', JSON.stringify(tvStorage));
   }
 }
