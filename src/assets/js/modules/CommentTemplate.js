@@ -18,7 +18,7 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
   <div class='addacomment'>
     <h1 class='commentheader'>Add a comment</h1>
     <input type='text' name='' class='yourname' placeholder='  Your name' value='' id=''>
-    <textarea name="" id="" cols="30" class='yourinsight' placeholder='  Your insight' value='' rows="10"></textarea>
+    <textarea name="" id="" cols="30" class='yourinsight' placeholder='  Your insights' value='' rows="10"></textarea>
   </div>
   <button class='comments1'>Comment</button>
 </div>`;
