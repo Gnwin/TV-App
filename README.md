@@ -3,15 +3,7 @@ An App that displays different TV shows
 
 ## Screenshot
 
-<!-- <img src="./src/assets/images/Screenshot 2022-03-30 at 2.44.58 AM.png"> -->
-
-## Testing with jest Screenshot
-
-<!-- <img src="./src/assets/images/Screenshot 2022-04-08 at 6.42.59 PM.png"> -->
-
-## Live Preview
-
-<!-- - Live preview: [click here](https://gnwin.github.io/Todo-list/) -->
+<img src="./src/assets/images/Screenshot 2022-04-23 at 11.35.00 PM.png">
 
 ## Built With
 
@@ -26,10 +18,9 @@ An App that displays different TV shows
 To get a local copy up and running follow this simple step:
 
 - Clone repository to your local machine: `www.github.com/gnwin/TV-App.git`
-- Run `git checkout feature/setup` to switch to develop branch
+- Run `git checkout feature/hit-api` to switch to develop branch
 - Run `npm install` to install dependencies
 - Run `npm start` to start the server
-<!-- - Run `npm test edit-update-clearall.test.js` to start the server -->
 
 
 ## Authors
@@ -38,7 +29,7 @@ To get a local copy up and running follow this simple step:
 
 - GitHub: [@gnwin](https://github.com/gnwin)
 
-👤 **@oscar**
+👤 **@karam**
 
 - GitHub: [@karam](https://github.com/karam084)
 
