@@ -1,5 +1,6 @@
 import * as InvAPI from "./InvolvementAPI";
 import { getAllShows } from "./TVapi";
+import Like from "./Like";
 
 import display from "./DisplayData";
 
@@ -28,7 +29,7 @@ const runApp = () => {
 
     let appid = InvAPI.createNewApp();
     let shows = getAllShows();
-
+    console.log('app');
 
     Promise.all([appid, shows])
       .then((responses) => {
@@ -39,21 +40,22 @@ const runApp = () => {
           } else {
             const tvStorage = JSON.parse(localStorage.getItem(key));
             tvStorage.shows = element;
-            tvStorage.shows.forEach((element)=>{
-              element.comments = [];
-              element.likes = 0;
-            })
+            tvStorage.likes = [];
+            tvStorage.comments = [];
             localStorage.setItem(key, JSON.stringify(tvStorage));
-            display.render(tvStorage.shows);
+            console.log(tvStorage)
+            
+            display.render(tvStorage);
           }
         })
       })
+      // .then(() => {})
       .catch((e) => {
         console.error(e.message);
       })
   } else {
     const tvStorage = JSON.parse(localStorage.getItem(key));
-    display.render(tvStorage.shows);
+    display.render(tvStorage);
   }
 
 }

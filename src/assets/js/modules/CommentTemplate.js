@@ -12,14 +12,13 @@ let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commen
 
   <div class='commentsection'>
     <h1 class='viewcomments'>Comments(0)<h1>
-    <div class='commentlist'>
-    </div>
+    <div class='commentlist'></div>
   </div>
 
   <div class='addacomment'>
     <h1 class='commentheader'>Add a comment</h1>
-    <input type='text' name='' class='yourname' placeholder='Your name' value='' id=''>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type='text' name='' class='yourname' placeholder='  Your name' value='' id=''>
+    <textarea name="" id="" cols="30" class='yourinsight' placeholder='  Your insight' value='' rows="10"></textarea>
   </div>
   <button class='comments1'>Comment</button>
 </div>`;

@@ -5,10 +5,10 @@ let showtemplate = (show) => `<div class="show" id=${show.id}>
   </div>
   <div class='info'>
     <div class=''>${show.title}</div>
-    <div class=''>(lovelogo)</div>
+    <div class='lovelogo'>(lovelogo)</div>
   </div>
   <div class='likesinfo'>
-    <div class='likes'>${show.likes}<span class='likesnum'> likes</span></div>
+    <div class='likes'><span class='likesnum'></span> likes</div>
   </div>
 
   <button class='comments'>Comments</button>

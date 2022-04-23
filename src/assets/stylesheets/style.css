@@ -156,6 +156,73 @@
   cursor: pointer;
 }
 
+.commenttemplate {
+  max-width: 80rem;
+  width: 80%;
+  margin: auto;
+}
+
+.cthumbnail {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.details {
+  padding: 1rem 0rem;
+}
+
+.commentsection {
+
+}
+
+.viewcomments {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.commentlist {
+  padding: 2rem;
+}
+
+.addacomment {
+  padding: 0 5%
+}
+
+.commentheader {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.yourname {
+  width: 50%;
+  padding: 0.5rem 0;
+  
+}
+
+.yourname,
+.yourinsight {
+  display: block;
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+  padding-left: 0.4rem;
+}
+
+.yourinsight {
+  width: 70%;
+  padding: 0.5rem 0;
+}
+
+.comments1 {
+  margin-left: 5%;
+}
+
 
 
 
