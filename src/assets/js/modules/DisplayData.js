@@ -5,12 +5,12 @@ import grabInput from './GrabUserinput';
 import Like from './Like';
 
 const showsDiv = document.querySelector('.shows');
+const shownum = document.querySelector('.num')
 let showTemplate = '';
 
 class Display {
   render = (data) => {
     const likesArr = [];
-    const commentsArr = [];
     const tvStorage = JSON.parse(localStorage.getItem('tvapp'));
     data.shows.forEach(element => {
       const show = new Show(element.id, element.name, element.image.medium);
@@ -18,6 +18,7 @@ class Display {
       showTemplate += showtemplate(show);
     });
     showsDiv.innerHTML = showTemplate;
+    shownum.innerHTML = tvStorage.shows.length;
 
     if (tvStorage.likes.length === 0) {
       data.shows.forEach(element => {
