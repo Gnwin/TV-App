@@ -5,6 +5,10 @@ An App that displays different TV shows
 
 <img src="./src/assets/images/Screenshot 2022-04-23 at 11.35.00 PM.png">
 
+## Test Screenshot
+
+<img src="./src/assets/images/Screenshot 2022-04-24 at 5.40.48 AMpng">
+
 ## Built With
 
 - HTML
