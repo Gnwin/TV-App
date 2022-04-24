@@ -7,7 +7,7 @@ An App that displays different TV shows
 
 ## Test Screenshot
 
-<img src="./src/assets/images/Screenshot 2022-04-24 at 5.40.48 AMpng">
+<img src="./src/assets/images/Screenshot 2022-04-24 at 5.40.48 AM.png">
 
 ## Built With
 
