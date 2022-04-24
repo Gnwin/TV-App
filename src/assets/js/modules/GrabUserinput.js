@@ -13,7 +13,13 @@ class GrabUserInput {
     let commentModal;
     tvStorage.shows.forEach((element) => {
       if (Number(showId) === element.id) {
-        commentModal = new CommentModal(element.id, element.name, element.image.medium, element.language, element.runtime);
+        commentModal = new CommentModal(
+          element.id,
+          element.name,
+          element.image.medium,
+          element.language,
+          element.runtime,
+        );
       }
     });
     const modal = document.getElementById('myModal');
@@ -26,7 +32,7 @@ class GrabUserInput {
       const commentList = document.querySelector('.commentlist');
       let counter = 0;
       tvStorage.comments.forEach((element) => {
-        if (Number(showId) === element.id) {
+        if (showId === element.id) {
           existingComment += commentMarkup(element);
           counter += 1;
         }
@@ -48,7 +54,8 @@ class GrabUserInput {
   like = (e) => {
     e.preventDefault();
     const itemid = e.target.parentElement.parentElement.parentElement.id;
-    const likeElement = e.target.parentElement.parentElement.parentElement.children[2].children[0].children[0];
+    const likeElement = e.target.parentElement.parentElement
+      .parentElement.children[2].children[0].children[0];
     let likenum = Number(likeElement.innerHTML);
     likenum += 1;
     likeElement.innerHTML = likenum;
@@ -64,7 +71,7 @@ class GrabUserInput {
 
   comment = (e) => {
     e.preventDefault();
-    const id = e.target.parentElement.id;
+    const { id } = e.target.parentElement;
     const name = document.querySelector('.yourname');
     const insight = document.querySelector('.yourinsight');
     const namevalue = name.value;

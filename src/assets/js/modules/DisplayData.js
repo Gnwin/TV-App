@@ -52,13 +52,6 @@ class Display {
 
     const span = document.getElementsByClassName('close')[0];
     span.onclick = grabInput.closeComment;
-
-    const modal = document.getElementById('myModal');
-    Window.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    };
   }
 }
 
