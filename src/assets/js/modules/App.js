@@ -7,9 +7,9 @@ const key = 'tvapp';
 const runApp = () => {
   const content = document.querySelector('.shows');
   if (content.innerHTML === '') {
-    content.innerHTML = `<div class='loader'>Loading...</div>`
+    content.innerHTML = `<div class=\'loader\'>Loading...</div>`;
   }
-  
+
   if (localStorage.getItem(key) === null) {
     const appid = InvAPI.createNewApp();
     const shows = getAllShows();
