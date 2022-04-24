@@ -1,14 +1,14 @@
 import * as InvAPI from './InvolvementAPI.js';
-import getAllShows from './TVapi.js';
+import getAllShows from './TvAPI.js';
 
-import display from './DisplayData';
+import display from './DisplayData.js';
 
 const key = 'tvapp';
 const runApp = () => {
   if (localStorage.getItem(key) === null) {
     const appid = InvAPI.createNewApp();
     const shows = getAllShows();
-    
+
     Promise.all([appid, shows])
       .then((responses) => {
         responses.forEach((element) => {
@@ -23,7 +23,7 @@ const runApp = () => {
             display.render(tvStorage);
           }
         });
-      })
+      });
   } else {
     const tvStorage = JSON.parse(localStorage.getItem(key));
     display.render(tvStorage);

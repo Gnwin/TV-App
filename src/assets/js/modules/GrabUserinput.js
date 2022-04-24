@@ -1,4 +1,4 @@
-import insertCommentModalInfo from "./InsertCommentContent.js";
+import insertCommentModalInfo from './InsertCommentContent.js';
 import commenttemplate from './CommentTemplate.js';
 import CommentModal from './CommentModal.js';
 import Comment from './Comment.js';
@@ -16,7 +16,7 @@ class GrabUserInput {
         commentModal = new CommentModal(element.id, element.name, element.image.medium, element.language, element.runtime);
       }
     });
-    const modal = document.getElementById("myModal");
+    const modal = document.getElementById('myModal');
     insertCommentModalInfo(commentModal, commenttemplate);
     const commentNum = document.querySelector('.commentnum');
     if (tvStorage.comments.length === 0) {
@@ -25,24 +25,24 @@ class GrabUserInput {
       let existingComment = '';
       const commentList = document.querySelector('.commentlist');
       let counter = 0;
-      tvStorage.comments.forEach(element => {
-        if (Number(showId) == element.id) {
+      tvStorage.comments.forEach((element) => {
+        if (Number(showId) === element.id) {
           existingComment += commentMarkup(element);
           counter += 1;
         }
-      })
+      });
       commentList.innerHTML = existingComment;
       commentNum.innerHTML = counter;
     }
     const makeAComment = document.querySelector('.comments1');
     makeAComment.onclick = this.comment;
-    modal.style.display = "block";
+    modal.style.display = 'block';
   }
 
   closeComment = (e) => {
     e.preventDefault();
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
   }
 
   like = (e) => {

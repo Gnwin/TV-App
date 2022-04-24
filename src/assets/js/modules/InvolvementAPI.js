@@ -15,10 +15,8 @@ export const createlike = (appid, item1) => fetch(`${involvementApi}/apps/${appi
   })
     .then((res) => res.json());
 
-export const getlikes = (appid) => {
-  return fetch(`${involvementApi}/apps/${appid}/likes/`)
+export const getlikes = (appid) => fetch(`${involvementApi}/apps/${appid}/likes/`)
     .then((res) => res.json());
-};
 
 export const createcomment = (appid, item1, name, comment) => fetch(`${involvementApi}/apps/${appid}/comments/`, {
     method: 'POST',
@@ -27,9 +25,6 @@ export const createcomment = (appid, item1, name, comment) => fetch(`${involveme
       username: name,
       comment: comment,
     }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
   })
     .then((res) => res.json());
 

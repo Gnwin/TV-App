@@ -1,4 +1,4 @@
-let commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commentInfo.id}>
+const commenttemplate = (commentInfo) => `<div class="commenttemplate" id=${commentInfo.id}>
   <div class='cthumbnail'>
     <img class='cimg' src='${commentInfo.link}'/>
   </div>

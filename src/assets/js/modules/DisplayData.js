@@ -54,7 +54,7 @@ class Display {
     span.onclick = grabInput.closeComment;
 
     const modal = document.getElementById('myModal');
-    window.onclick = function(event) {
+    Window.onclick = function (event) {
       if (event.target === modal) {
         modal.style.display = 'none';
       }
