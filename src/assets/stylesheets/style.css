@@ -85,6 +85,11 @@
   border-radius: 5%;
 }
 
+.loader {
+  padding: 10rem;
+  font-size: 4rem;
+}
+
 .shows {
   display: grid;
   gap: 3rem;
