@@ -9,6 +9,10 @@ An App that displays different TV shows
 
 <img src="./src/assets/images/Screenshot 2022-04-24 at 5.40.48 AM.png">
 
+## Video Presentation link
+
+- Video link: [click here](https://www.loom.com/share/76de58da34ab4569b844ea8e0c094e86)
+
 ## Built With
 
 - HTML
