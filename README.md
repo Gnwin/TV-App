@@ -26,6 +26,14 @@ To get a local copy up and running follow this simple step:
 - Run `npm install` to install dependencies
 - Run `npm start` to start the server
 
+## Testing
+
+To get a local copy up and running follow this simple step:
+
+- Clone repository to your local machine: `www.github.com/gnwin/Todo-list.git`
+- Run `git checkout feature/hit-api` to switch to develop branch
+- Run `npm install` to install dependencies
+- Run `npm test GrabUserinput.test.js` to run test
 
 ## Authors
 
